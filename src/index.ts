@@ -1,12 +1,7 @@
-import { findLabel, type CalendarEntry } from "./code_weak";
+import { getEntries } from "./FakeDb";
+import { findLabel } from "./LibWeak";
 
-const entries: CalendarEntry[] = [
-	{ code: "holiday" },
-	{ code: "mon" },
-	{ code: "wed" },
-	{ code: "company_holiday" },
-	{ code: "fri" }
-];
+const entries = getEntries();
 
 // 月・水・金だけを対象にする
 const filter = { days: ["mon", "wed", "fri"] as ("mon" | "wed" | "fri")[] };

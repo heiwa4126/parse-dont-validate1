@@ -1,7 +1,5 @@
-import { weekdayLabelMap, type DayCode, type Weekday } from "./day_code_type";
-
-// 弱い型定義
-export type CalendarEntry = { code: DayCode };
+import type { CalendarEntry } from "./CalendarEntry";
+import { weekdayLabelMap, type DayCode, type Weekday } from "./DayCode";
 
 // 9個から7個を選り分けるための関数(実行時にキー存在チェック)
 const weekdayFromCode = (code: DayCode): Weekday | undefined =>

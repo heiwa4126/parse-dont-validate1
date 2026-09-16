@@ -1,12 +1,7 @@
-import { findLabel, type CalendarEntry } from "./code_strong";
+import { getEntries2 } from "./FakeDb";
+import { findLabel } from "./LibStrong";
 
-const entries: CalendarEntry[] = [
-	{ code: "holiday", weekday: null },
-	{ code: "mon", weekday: "mon" },
-	{ code: "wed", weekday: "wed" },
-	{ code: "company_holiday", weekday: null },
-	{ code: "fri", weekday: "fri" }
-];
+const entries = getEntries2();
 
 // 月・水・金だけを対象にする
 const filter = { days: ["mon", "wed", "fri"] as ("mon" | "wed" | "fri")[] };
