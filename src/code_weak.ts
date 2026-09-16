@@ -1,16 +1,7 @@
-import type { CalendarEntry, DayCode } from "./type_weak";
+import { weekdayLabelMap, type DayCode, type Weekday } from "./day_code_type";
 
-type Weekday = "mon" | "tue" | "wed" | "thu" | "fri" | "sat" | "sun"; // 7件
-
-const weekdayLabelMap: Record<Weekday, string> = {
-	mon: "月",
-	tue: "火",
-	wed: "水",
-	thu: "木",
-	fri: "金",
-	sat: "土",
-	sun: "日"
-};
+// 弱い型定義
+export type CalendarEntry = { code: DayCode };
 
 // 9個から7個を選り分けるための関数(実行時にキー存在チェック)
 const weekdayFromCode = (code: DayCode): Weekday | undefined =>

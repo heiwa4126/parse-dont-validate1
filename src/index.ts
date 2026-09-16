@@ -1,5 +1,4 @@
-import { findLabel } from "./code1";
-import type { CalendarEntry } from "./type_weak";
+import { findLabel, type CalendarEntry } from "./code_weak";
 
 const entries: CalendarEntry[] = [
 	{ code: "holiday" },
