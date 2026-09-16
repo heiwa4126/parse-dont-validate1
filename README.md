@@ -7,12 +7,15 @@
 
 ## 強い型にする、とは?
 
-「データが1個増える」のと引き換えに、「判定ロジックが使用箇所の数だけ複製される」問題を消す。
+「データが 1 個増える」のと引き換えに、「判定ロジックが使用箇所の数だけ複製される」問題を消す。
 
-- フィールドが1個増えるコストは固定
+- フィールドが 1 個増えるコストは固定
 - だが、判定コードの複製は使う場所が増えるたびに増え続ける
 
 後者を境界(データを作る側)に寄せてしまう、というのが元記事の言う「強い型にする」。
+
+「増えたフィールド 1 個」と「消えた関数 3 つ×呼び出し箇所の数」を比べると、
+後者の方がずっと大きい、という主張。
 
 ## 開発
 
@@ -25,7 +28,9 @@ bun install
 To run:
 
 ```bash
-bun run index.ts
+bun run src/index.ts  # 弱い型
+bun run src/index2.ts # 強い型
 ```
 
-This project was created using `bun init` in bun v1.4.2. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+This project was created using `bun init` in bun v1.4.2.
+[Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
