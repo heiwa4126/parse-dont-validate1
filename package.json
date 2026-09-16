@@ -2,7 +2,7 @@
 	"name": "parse-dont-validate1",
 	"private": true,
 	"type": "module",
-	"module": "index.ts",
+	"module": "src/index.ts",
 	"scripts": {
 		"format": "oxfmt",
 		"lint": "oxlint .",
